@@ -1,0 +1,19 @@
+{
+  "name": "felipeganrel",
+  "version": "1.0.0",
+  "description": "Meu site pessoal",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeGangrel/felipegangrel.github.io.git"
+  },
+  "author": "Felipe Gangrle <feipefrog@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeGangrel/felipegangrel.github.io/issues"
+  },
+  "homepage": "https://github.com/FelipeGangrel/felipegangrel.github.io#readme"
+}
