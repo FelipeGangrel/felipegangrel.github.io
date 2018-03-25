@@ -8,6 +8,10 @@ $fa-font-path: '../../fonts';
 
 @import "editor";
 
+* {
+    box-sizing: content-box;
+}
+
 body {
     background-color: $editor-background-color;
     font-family: $roboto;
@@ -23,9 +27,7 @@ body {
 main#app {
     background-color: $editor-background-color;
     margin-left: 340px;
-    padding-top: 60px;
-    height: 100%;
-    min-height: 100vh;
+    height: calc(100vh - $footer-height);
     transition: margin-left .3s linear;
     overflow: hidden;
 
@@ -34,7 +36,7 @@ main#app {
     }
 
     div#navigator {
-        padding-top: 1em;
+        // padding-top: 1em;
         background-color: $navigator-background-color;
         left: 0;
         top: 0;
@@ -57,15 +59,15 @@ main#app {
             width: 60px;
             line-height: 60px;
             text-align: center;
-            background-color: darken($editor-background-color, 5%);
+            background-color: $navigator-background-color;
             cursor: pointer;
         }
         div.files {
             > div {
-                padding: 1em;
                 transition: background-color .3s ease;
             }
             div:not(.folder) {
+                padding: 1em;
                 padding-left: 3em;
                 &:hover {
                     cursor: pointer;
@@ -76,8 +78,11 @@ main#app {
                 }
             }
             div.folder {
+                height: 60px;
+                line-height: 60px;
+                padding-left: 2em;
+                background-color: $navigator-background-color;
                 i {
-                    // transform: rotate(45deg);
                     margin-right: .5em;
                 }
             }
@@ -134,6 +139,7 @@ main#app {
         background-color: $editor-background-color;
         width: calc(100vw - 340px);
         height: calc(100vh - 60px);
+        padding-top: 60px;
         overflow: auto;
         font-family: $source-code-pro;
         @include breakpoint($max-sm) {
@@ -143,6 +149,30 @@ main#app {
             box-sizing: border-box;
             padding: 2em;
             min-width: 800px;
+            padding-bottom: 50px;
+        }
+    }
+
+    footer {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 100vw;
+        height: $footer-height;
+        line-height: $footer-height;
+        background-color: $footer-background-color;
+        color: $white;
+        padding: 0 1em;
+        color: $editor-background-color;
+        font-size: .8em;
+        color: $white;
+        a {
+            color: $white;
+            text-decoration: none;
         }
     }
 }

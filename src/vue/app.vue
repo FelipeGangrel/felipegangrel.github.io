@@ -3,6 +3,7 @@
         <navigator />
         <tabs />
         <editor />
+        <my-footer />
     </main>
 </template>
 
@@ -11,12 +12,14 @@
 import Editor from './editor.vue'
 import Navigator from './navigator.vue'
 import Tabs from './tabs.vue'
+import MyFooter from './footer.vue'
 
 export default {
     components: {
         Editor,
         Navigator,
         Tabs,
+        MyFooter
     },
     computed: {
         menuToggle () {
