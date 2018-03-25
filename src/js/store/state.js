@@ -7,9 +7,10 @@ const files = [
         content: `
             <span class="comment">
             /****************************************************************<br />
-             * Olá mundo! <br />
-             * Sou Felipe Pires de Oliveira, um desenvolvedor web full stack <br />
-             * apaixonado por boas práticas de desenvolvimento,  <br />
+             * Olá mundo! Sou Felipe &lt;Gangrel&gt; Pires de Oliveira. <br />
+             * Atuo como desenvolvedor web full stack em Volta Redonda, RJ <br />
+             * Apaixonado por aprender e aplicar novas tecnologias e <br />
+             * boas práticas de desenvolvimento  <br />
              ****************************************************************/<br />
             </span><br />
             <span class="const">const</span> <span class="name">name</span> <span class="definer">=</span> <span class="string">'Felipe \<Gangrel\> Pires de Oliveira'</span>;<br />
