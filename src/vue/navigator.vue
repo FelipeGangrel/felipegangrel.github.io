@@ -2,7 +2,7 @@
     <div id="navigator">
         <div class="menu" @click="menuToggle"><i class="fa fa-bars"></i></div>
         <div class="files">
-            <div class="folder"><i class="fa fa-caret-right"></i> felipeGangrel</div>
+            <div class="folder"><i class="fa fa-folder-open"></i> felipeGangrel</div>
             <template v-for="(file, index) in files">
                 <navigator-item v-bind:key="index" :index="`${index}`"></navigator-item>    
             </template>

@@ -67,7 +67,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
     },
     module: {
         rules: [
@@ -81,7 +81,8 @@ module.exports = {
         extractSass,
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),
-            hash: true,
+            hash: false,
+            publicPath: '/',
         }),
     ],
     watch: true,

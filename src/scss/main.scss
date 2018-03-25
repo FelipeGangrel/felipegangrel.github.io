@@ -9,6 +9,7 @@ $fa-font-path: '../../fonts';
 @import "editor";
 
 body {
+    background-color: $editor-background-color;
     font-family: $roboto;
     color: $editor-color;
     font-size: 16px;
@@ -27,6 +28,10 @@ main#app {
     transition: margin-left .3s linear;
     overflow: hidden;
 
+    @include breakpoint($max-sm) {
+        margin-left: 200px;
+    }
+
     div#navigator {
         padding-top: 1em;
         background-color: $navigator-background-color;
@@ -36,6 +41,9 @@ main#app {
         height: 100vh;
         position: fixed;
         transition: left .3s linear;
+        @include breakpoint($max-sm) {
+            width: 200px;
+        }
         ::selection {
             background-color: transparent;
         }
@@ -52,10 +60,11 @@ main#app {
         }
         div.files {
             > div {
-                padding: .3em 1em;
+                padding: 1em;
+                transition: background-color .3s ease;
             }
             div:not(.folder) {
-                padding-left: 2em;
+                padding-left: 3em;
                 &:hover {
                     cursor: pointer;
                     background-color: lighten($navigator-background-color, 2%);
@@ -66,7 +75,8 @@ main#app {
             }
             div.folder {
                 i {
-                    transform: rotate(45deg);
+                    // transform: rotate(45deg);
+                    margin-right: .5em;
                 }
             }
         }
@@ -82,19 +92,23 @@ main#app {
         overflow-x: auto;
         flex-direction: row;
         padding-left: 60px;
+        @include breakpoint($max-sm) {
+            width: calc(100vw - 200px - 60px);
+        }
         ::selection {
             background-color: transparent;
         }
         div {
             flex-shrink: 0;
-            padding-left: 1em;
+            padding-left: 2em;
             padding-right: 1em;
             line-height: 60px;
             background-color: darken($editor-background-color, 2%);
+            transition: background-color .3s ease;
             cursor: pointer;
             span.close {
                 opacity: 0;
-                font-size: 1em;
+                font-size: 1.5em;
                 cursor: pointer;
                 margin-left: 1em;
             }
@@ -116,6 +130,9 @@ main#app {
         height: calc(100vh - 60px);
         overflow: auto;
         font-family: $source-code-pro;
+        @include breakpoint($max-sm) {
+            width: calc(100vw - 200px);
+        }
         .editor-content {
             box-sizing: border-box;
             padding: 2em;
@@ -128,6 +145,9 @@ main#app.menu-toggle {
     margin-left: 0px;
     div#navigator {
         left: -340px;
+        @include breakpoint($max-sm) {
+            left: -200px;
+        }
     }
     div#tabs {
         width: calc(100vw - 60px);

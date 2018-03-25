@@ -1,5 +1,5 @@
 // colors
-$max-sm: (max-width: 800px);
+$max-sm: (max-width: 640px);
 
 $petrol: #282C34;
 $white: #FFFFFF;
@@ -15,7 +15,7 @@ $green: #98C379;
 $editor-background-color: $petrol;
 $editor-color: $gray-100;
 
-$navigator-background-color: lighten($editor-background-color, 5%);
+$navigator-background-color: lighten($editor-background-color, 2%);
 $navigator-color: $ice;
 
 // fonts

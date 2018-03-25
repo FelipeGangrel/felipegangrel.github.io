@@ -34,7 +34,7 @@ const files = [
             
             <span class="const">const</span> <span class="name">frontend</span> <span class="definer">=</span> [ <br />
                 ${tab}<span class="string">'HTML5 + CSS3'</span>, <span class="comment">// + LESS e SASS </span> <br />
-                ${tab}<span class="string">'JavaScript'</span>, <span class="comment">// Nos sabores vanilha ES6 e também com JQuery </span> <br />
+                ${tab}<span class="string">'JavaScript'</span>, <span class="comment">// Nos sabores Vanilha ES6 e também com JQuery </span> <br />
                 ${tab}<span class="string">'Angular'</span>, <span class="comment">// Experiência em desenvolvimento mobile </span> <br />
                 ${tab}<span class="string">'VueJS'</span>, <span class="comment">// Meu framework para componentização de view preferido ${heart} </span> <br />
             ];<br />
@@ -49,16 +49,13 @@ const files = [
 
         `,
     },
-    { 
-        filename: 'jobs-and-education.js',
-        content: 'conteúdo de jobs-and-education.js'
-    },
 ];
 
 export default {
     files: files,
     open: [
         files[0],
+        files[1],
     ],
     active: files[0],
     menuToggle: false,
