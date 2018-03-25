@@ -85,7 +85,6 @@ module.exports = {
             publicPath: '/',
         }),
     ],
-    watch: true,
     devtool: 'cheap-eval-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
