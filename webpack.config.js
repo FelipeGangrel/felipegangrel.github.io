@@ -81,7 +81,7 @@ module.exports = {
         extractSass,
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),
-            hash: false,
+            hash: true,
             publicPath: '/',
         }),
     ],

@@ -87,6 +87,7 @@ main#app {
     div#tabs {
         position: fixed;
         top: 0;
+        -webkit-transform: translateZ(0);
         z-index: 1;
         height: 60px;
         line-height: 60px;
