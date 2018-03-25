@@ -1,0 +1,23 @@
+// colors
+$max-sm: (max-width: 800px);
+
+$petrol: #282C34;
+$white: #FFFFFF;
+$ice: #FAFAFA;
+$gray-100: #ABB2BF;
+$gray-200: #878585;
+
+$purple: #C678DD;
+$orange: #D19A66;
+$aqua: #56B6C2;
+$green: #98C379;
+
+$editor-background-color: $petrol;
+$editor-color: $gray-100;
+
+$navigator-background-color: lighten($editor-background-color, 5%);
+$navigator-color: $ice;
+
+// fonts
+$source-code-pro: 'Source Code Pro', monospace;
+$roboto: 'Roboto', sans-serif;

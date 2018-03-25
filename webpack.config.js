@@ -25,19 +25,19 @@ const rules = {
         use: extractSass.extract({
             use: [
                 {   // traduz css para CommonJS
-                    loader: 'css-loader', 
+                    loader: 'css-loader',
                     options: {
                         sourceMap: true,
                         minimize: true,
                     }
-                }, 
+                },
                 {   // Compila SASS para CSS
                     loader: 'sass-loader',
                     options: {
                         sourceMap: true,
                         minify: true,
                     }
-                }, 
+                },
             ],
             fallback: 'style-loader' // usar style loader em desenvolvimento
         })
@@ -47,14 +47,21 @@ const rules = {
         use: {
             loader: 'vue-loader',
         }
-    }
+    },
+    fonts : {
+        test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
+        use: {
+            loader: 'file-loader',
+        }
+    },
+
 };
 
 module.exports = {
     mode: 'development',
     entry: {
         app: [
-            './src/js/app.js', 
+            './src/js/app.js',
             './src/scss/main.scss',
         ],
     },
@@ -67,6 +74,7 @@ module.exports = {
             rules.js,
             rules.sass,
             rules.vue,
+            rules.fonts,
         ]
     },
     plugins: [

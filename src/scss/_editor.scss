@@ -1,0 +1,30 @@
+div#editor .editor-content {
+    line-height: 1.6em;
+    a {
+        color: $green;
+        text-decoration: none;
+    }
+    .comment {
+        color: $gray-200;
+        font-style: italic;
+    }
+    .const, .var, .let {
+        color: $purple;
+    }
+    .name {
+        color: $orange;
+    }
+    .definer {
+        color: $aqua;
+    }
+    .string {
+        color: $green;
+    }
+    .link {
+        text-decoration: underline;
+    }
+    .tab {
+        display: inline-block;
+        width: 1em;
+    }
+}

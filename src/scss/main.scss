@@ -1,4 +1,139 @@
-html, body {
-    background-color: #333;
-    color: #fafafa;
+// breakpoint-sass
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+$fa-font-path: '../../fonts';
+@import '~font-awesome/scss/font-awesome';
+
+@import "variables";
+
+@import "editor";
+
+body {
+    font-family: $roboto;
+    color: $editor-color;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    ::selection {
+        background-color: rgba(#FFF, .1);
+    }
 }
+
+main#app {
+    background-color: $editor-background-color;
+    margin-left: 340px;
+    height: 100%;
+    min-height: 100vh;
+    transition: margin-left .3s linear;
+    overflow: hidden;
+
+    div#navigator {
+        padding-top: 1em;
+        background-color: $navigator-background-color;
+        left: 0;
+        top: 0;
+        width: 340px;
+        height: 100vh;
+        position: fixed;
+        transition: left .3s linear;
+        ::selection {
+            background-color: transparent;
+        }
+        div.menu {
+            position: absolute;
+            top: 0;
+            right: -60px;
+            height: 60px;
+            width: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: darken($editor-background-color, 5%);
+            cursor: pointer;
+        }
+        div.files {
+            > div {
+                padding: .3em 1em;
+            }
+            div:not(.folder) {
+                padding-left: 2em;
+                &:hover {
+                    cursor: pointer;
+                    background-color: lighten($navigator-background-color, 2%);
+                }
+                &.active {
+                    background-color: lighten($navigator-background-color, 5%);
+                }
+            }
+            div.folder {
+                i {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    div#tabs {
+        height: 60px;
+        line-height: 60px;
+        background-color: darken($editor-background-color, 5%);
+        width: calc(100vw - 340px - 60px);
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: auto;
+        flex-direction: row;
+        padding-left: 60px;
+        ::selection {
+            background-color: transparent;
+        }
+        div {
+            flex-shrink: 0;
+            padding-left: 1em;
+            padding-right: 1em;
+            line-height: 60px;
+            background-color: darken($editor-background-color, 2%);
+            cursor: pointer;
+            span.close {
+                opacity: 0;
+                font-size: 1em;
+                cursor: pointer;
+                margin-left: 1em;
+            }
+            &:hover, &.active {
+                span.close {
+                    opacity: 1;
+                    color: $white;
+                }
+            }
+            &.active {
+                background-color: $editor-background-color;
+            }
+        }
+    }
+
+    div#editor {
+        background-color: $editor-background-color;
+        width: calc(100vw - 340px);
+        height: calc(100vh - 60px);
+        overflow: auto;
+        font-family: $source-code-pro;
+        .editor-content {
+            box-sizing: border-box;
+            padding: 2em;
+            min-width: 800px;
+        }
+    }
+}
+
+main#app.menu-toggle {
+    margin-left: 0px;
+    div#navigator {
+        left: -340px;
+    }
+    div#tabs {
+        width: calc(100vw - 60px);
+    }
+    div#editor {
+        width: 100vw;
+    }
+}
+
