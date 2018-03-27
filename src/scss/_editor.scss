@@ -4,12 +4,21 @@ div#editor .editor-content {
         color: $green;
         text-decoration: none;
     }
+    .new {
+        color: $blue;
+    }
+    .class {
+        color: $aqua;
+    }
     .comment {
         color: $gray-200;
         font-style: italic;
     }
-    .const, .var, .let {
+    .const, .var, .let, .import, .from {
         color: $purple;
+    }
+    .method {
+        color: $yellow;
     }
     .name {
         color: $orange;
@@ -27,4 +36,5 @@ div#editor .editor-content {
         display: inline-block;
         width: 1em;
     }
+    
 }

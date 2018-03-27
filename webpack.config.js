@@ -2,11 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const extractSass = new ExtractTextPlugin({
     filename: '[name].bundle.css',
     disable: process.env.NODE_ENV === "development"
 });
+
+
 
 const rules = {
     js: {
@@ -27,14 +30,14 @@ const rules = {
                 {   // traduz css para CommonJS
                     loader: 'css-loader',
                     options: {
-                        sourceMap: true,
+                        sourceMap: false,
                         minimize: true,
                     }
                 },
                 {   // Compila SASS para CSS
                     loader: 'sass-loader',
                     options: {
-                        sourceMap: true,
+                        sourceMap: false,
                         minify: true,
                     }
                 },
@@ -64,6 +67,10 @@ module.exports = {
             './src/js/app.js',
             './src/scss/main.scss',
         ],
+        // vendor: [
+        //     'vue',
+        //     'vuex',
+        // ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -84,6 +91,7 @@ module.exports = {
             hash: true,
             publicPath: '/',
         }),
+        new bundleAnalyzerPlugin(),
     ],
     devtool: 'cheap-eval-source-map',
     devServer: {
@@ -94,7 +102,7 @@ module.exports = {
     resolve: {
         alias: {
             vue$: 'vue/dist/vue.js',
-            '@fortawesome/fontawesome-free-solid$': '@fortawesome/fontawesome-free-solid/shakable.es.js'
+            // '@fortawesome/fontawesome-free-solid$': '@fortawesome/fontawesome-free-solid/shakable.es.js'
         }
     }
 }

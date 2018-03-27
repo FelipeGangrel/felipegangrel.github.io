@@ -5,6 +5,7 @@ const files = [
     { 
         filename: 'me.js',
         content: `
+
             <span class="comment">
             /****************************************************************<br />
              * Olá mundo! Sou Felipe &lt;Gangrel&gt; Pires de Oliveira. <br />
@@ -18,11 +19,13 @@ const files = [
             <span class="const">const</span> <span class="name">twitter</span> <span class="definer">=</span> <span class="string link">'<a target="_blank" href="https://twitter.com/felipegangrel">https://twitter.com/felipegangrel</a>'</span>;<br />
             <span class="const">const</span> <span class="name">tranposCo</span> <span class="definer">=</span> <span class="string link">'<a target="_blank" href="https://trampos.co/olveirafelipe">https://trampos.co/olveirafelipe</a>'</span>;<br />
             <span class="const">const</span> <span class="name">linkedIn</span> <span class="definer">=</span> <span class="string link">'<a target="_blank" href="https://www.linkedin.com/in/felipegangrel/">https://www.linkedin.com/in/felipegangrel/</a>'</span>;<br />
+
         `,
     },
     { 
         filename: 'skills.js',
         content: `
+
             <span class="const">const</span> <span class="name">backend</span> <span class="definer">=</span> [ <br />
                 ${tab}<span class="string">'PHP'</span>, <span class="comment">// PHP Orientado a objetos + MVC</span> <br />
                 ${tab}<span class="string">'Laravel e Doctrine ORM'</span>, <span class="comment">// Não tem como não amar esta dupla</span> <br />
@@ -50,6 +53,58 @@ const files = [
 
         `,
     },
+    {
+        filename: 'jobs-and-education.js',
+        content: `
+
+            <span class="import">import</span> {<span class="name">JobCollection</span>, <span class="name">EducationCollection</span>} <span class="from">from</span> <span class="string">'@felipeGangrel/Collections'</span> <br />
+
+            <br />
+
+            <span class="var">var</span> <span class="name">jobs</span> <span class="definer">=</span> <span class="new">new</span> <span class="class">JobCollection</span>(); <br />
+            <span class="var">var</span> <span class="name">formacao</span> <span class="definer">=</span> <span class="new">new</span> <span class="class">EducationCollection</span>(); <br />
+
+            <br />
+
+            <span class="comment">
+                // Emprego atual
+            </span> <br />
+
+            <span class="name">jobs</span><span class="method">.add</span>(</span><span class="new">new</span> <span class="class">Job</span>(<span class="string">'Desenvolvedor Web full stack'</span>, { <br />
+                ${tab}<span class="definer">ano :</span> 2015,<br />
+                ${tab}<span class="definer">instituicao :</span> <span class="string">'Foco Comunicação'</span>,<br />
+                ${tab}<span class="definer">local :</span> <span class="string">'Volta Redonda - RJ'</span>,<br />
+            }));<br />
+
+            <br />
+
+            <span class="name">jobs</span><span class="method">.add</span>(</span><span class="new">new</span> <span class="class">Job</span>(<span class="string">'Desenvolvedor Web'</span>, { <br />
+                ${tab}<span class="definer">ano :</span> 2014,<br />
+                ${tab}<span class="definer">instituicao :</span> <span class="string">'Prefeitura de Barra do Piraí'</span>,<br />
+                ${tab}<span class="definer">local :</span> <span class="string">'Barra do Piraí - RJ'</span>,<br />
+            }));<br />
+
+            <br />
+
+            <span class="name">jobs</span><span class="method">.add</span>(</span><span class="new">new</span> <span class="class">Job</span>(<span class="string">'Instrutor de Desenvolvimento Web'</span>, { <br />
+                ${tab}<span class="definer">ano :</span> 2014,<br />
+                ${tab}<span class="definer">instituicao :</span> <span class="string">'SENAI'</span>,<br />
+                ${tab}<span class="definer">local :</span> <span class="string">'Vassouras - RJ'</span>,<br />
+            }));<br />
+
+            <br />
+
+            <span class="name">formacao</span><span class="method">.add</span>(</span><span class="new">new</span> <span class="class">Education</span>(<span class="string">'Bacharelado em Sistemas de Informação'</span>, { <br />
+                ${tab}<span class="definer">ano :</span> 2009,<br />
+                ${tab}<span class="definer">instituicao :</span> <span class="string">'Universidade Severino Sombra'</span>,<br />
+                ${tab}<span class="definer">local :</span> <span class="string">'Vassouras - RJ'</span>,<br />
+            }));<br />
+
+            <br />
+
+            
+        `,
+    }
 ];
 
 export default {
