@@ -1,0 +1,21 @@
+{
+    "presets": [
+        ["env", {
+            "targets": {
+                "browsers": [
+                    "Chrome >= 52",
+                    "FireFox >= 44",
+                    "Safari >= 7",
+                    "Explorer 11",
+                    "last 4 Edge versions"
+                ]
+            },
+            "useBuiltIns": true
+        }],
+        "es2015",
+        "es2015-ie"
+    ],
+    "ignore": [
+        "node_modules"
+    ]
+}

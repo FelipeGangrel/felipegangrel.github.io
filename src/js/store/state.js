@@ -59,5 +59,5 @@ export default {
         files[1],
     ],
     active: files[0],
-    menuToggle: false,
+    menuToggle: window.innerWidth < 800,
 }

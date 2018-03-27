@@ -74,7 +74,7 @@ module.exports = {
             rules.js,
             rules.sass,
             rules.vue,
-            rules.fonts,
+            // rules.fonts,
         ]
     },
     plugins: [
@@ -93,7 +93,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            vue: 'vue/dist/vue.js',
+            vue$: 'vue/dist/vue.js',
+            '@fortawesome/fontawesome-free-solid$': '@fortawesome/fontawesome-free-solid/shakable.es.js'
         }
     }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --watch --mode development",
-    "prod": "webpack --mode production"
+    "prod": "rimraf -r dist && webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-ie": "^6.7.0",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
@@ -36,8 +37,10 @@
     "webpack-dev-server": "^3.1.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
     "breakpoint-sass": "^2.7.1",
-    "font-awesome": "^4.7.0",
+    "es6-promise": "^4.2.4",
     "vue": "^2.5.16",
     "vuex": "^3.0.1"
   }
