@@ -61,7 +61,7 @@ const rules = {
 };
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         app: [
             './src/js/app.js',
