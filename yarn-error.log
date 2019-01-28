@@ -1,0 +1,83 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/iCLS:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Git/cmd:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Users/Felipe/AppData/Local/Microsoft/WindowsApps:/mnt/d/flutter/bin:/mnt/c/Users/Felipe/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Felipe/AppData/Local/hyper/app-2.1.1/resources/bin:/snap/bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  8.10.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@fortawesome/fontawesome-free-solid/-/fontawesome-free-solid-5.0.13.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/usr/share/yarn/lib/cli.js:130024:19)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:106:13)
+      at ClientRequest.emit (events.js:208:7)
+      at TLSSocket.emitTimeout (_http_client.js:711:34)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:106:13)
+      at TLSSocket.emit (events.js:208:7)
+      at TLSSocket.Socket._onTimeout (net.js:420:8)
+      at ontimeout (timers.js:482:11)
+
+npm manifest: 
+  {
+    "name": "felipegangrel",
+    "version": "1.0.0",
+    "description": "Meu site pessoal",
+    "main": "src/js/app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "webpack-dev-server --watch --mode development",
+      "prod": "rimraf -r dist && webpack --mode production"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/FelipeGangrel/felipegangrel.github.io.git"
+    },
+    "author": "Felipe Gangrel <feipefrog@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/FelipeGangrel/felipegangrel.github.io/issues"
+    },
+    "homepage": "https://github.com/FelipeGangrel/felipegangrel.github.io#readme",
+    "devDependencies": {
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.4",
+      "babel-preset-env": "^1.6.1",
+      "babel-preset-es2015-ie": "^6.7.0",
+      "css-loader": "^0.28.11",
+      "extract-text-webpack-plugin": "^4.0.0-beta.0",
+      "file-loader": "^1.1.11",
+      "html-webpack-plugin": "^3.1.0",
+      "node-sass": "^4.8.3",
+      "sass-loader": "^6.0.7",
+      "style-loader": "^0.20.3",
+      "vue-loader": "^14.2.2",
+      "vue-template-compiler": "^2.5.16",
+      "webpack": "^4.2.0",
+      "webpack-bundle-analyzer": "^2.11.1",
+      "webpack-cli": "^2.0.13",
+      "webpack-dev-server": "^3.1.1"
+    },
+    "dependencies": {
+      "@fortawesome/fontawesome": "^1.1.4",
+      "@fortawesome/fontawesome-free-solid": "^5.0.8",
+      "breakpoint-sass": "^2.7.1",
+      "es6-promise": "^4.2.4",
+      "vue": "^2.5.16",
+      "vuex": "^3.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
